@@ -53,19 +53,16 @@ const Navbar = () => {
     { 
       icon: <FaLinkedinIn />, 
       url: "https://www.linkedin.com/in/amitkadam1562", 
-      color: "#0077B5",
       name: "LinkedIn"
     },
     { 
       icon: <FaGithub />, 
       url: "https://github.com/amitkadam1562", 
-      color: "#333",
       name: "GitHub"
     },
     { 
       icon: <FaEnvelope />, 
       url: "mailto:amitkadam1562@gmail.com", 
-      color: "#EA4335",
       name: "Email"
     },
   ];
@@ -79,7 +76,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav ref={navbarRef} className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? "bg-white/99 shadow-lg" : "bg-white/90"}`}>
+    <nav ref={navbarRef} className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? "bg-white shadow-lg" : "bg-white"}`}>
       <div className="w-full flex items-center justify-between px-4 py-0 md:px-6 md:py-2">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3 group">
@@ -88,7 +85,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <h1 className="text-2xl font-bold text-navy-blue">Amit Kadam</h1>
+            <h1 className="text-2xl font-bold text-black">Amit Kadam</h1>
             <p className="text-xs text-gray-600 font-medium">Equity Research Analyst</p>
           </motion.div>
         </Link>
@@ -111,17 +108,11 @@ const Navbar = () => {
               {!item.dropdown ? (
                 <NavLink 
                   to={item.path} 
-                  className={({ isActive }) => `relative px-2 py-0 transition-all duration-300 ${isActive ? "text-gold font-semibold" : "text-gray-800 hover:text-navy-blue"}`}
+                  className={({ isActive }) => `relative px-2 py-0 transition-all duration-300 ${isActive ? "text-black font-bold border-b-2 border-black" : "text-gray-700 hover:text-black"}`}
                 >
                   {({ isActive }) => (
                     <>
                       {item.name}
-                      {isActive && (
-                        <motion.div 
-                          className="absolute bottom-0 left-0 w-full h-0.5 bg-gold"
-                          layoutId="navbar-indicator"
-                        />
-                      )}
                     </>
                   )}
                 </NavLink>
@@ -133,7 +124,7 @@ const Navbar = () => {
                 >
                   <Link 
                     to={item.path} 
-                    className={`flex items-center px-2 py-1 transition-all ${isActivePath(item.path) ? "text-gold font-semibold" : "text-gray-800 hover:text-navy-blue"}`}
+                    className={`flex items-center px-2 py-1 transition-all ${isActivePath(item.path) ? "text-black font-bold" : "text-gray-700 hover:text-black"}`}
                   >
                     {item.name}
                     <motion.span 
@@ -155,7 +146,7 @@ const Navbar = () => {
                           <li key={idx}>
                             <NavLink 
                               to={drop.path} 
-                              className={({ isActive }) => `block py-3 px-4 transition-all duration-300 border-b border-gray-100 last:border-b-0 ${isActive ? "bg-navy-blue text-white" : "text-gray-700 hover:bg-navy-blue hover:text-white"}`}
+                              className={({ isActive }) => `block py-3 px-4 transition-all duration-300 border-b border-gray-100 last:border-b-0 ${isActive ? "bg-black text-white" : "text-gray-700 hover:bg-gray-100 hover:text-black"}`}
                             >
                               {drop.name}
                             </NavLink>
@@ -175,14 +166,14 @@ const Navbar = () => {
           <a 
             href="/resume.pdf"
             download
-            className="flex items-center bg-gold text-navy-blue px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-semibold hover:bg-yellow-500"
+            className="flex items-center bg-black text-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-semibold hover:bg-gray-800 border border-black"
           >
             <FaFileDownload className="mr-2" />
             Resume
           </a>
           <a 
             href="tel:+918956506020" 
-            className="flex items-center bg-navy-blue text-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-semibold hover:bg-blue-800"
+            className="flex items-center bg-white text-black px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-semibold hover:bg-gray-100 border border-black"
           >
             <FaPhone className="mr-2" />
             Call
@@ -202,7 +193,7 @@ const Navbar = () => {
               <div className="flex justify-between items-center py-4 border-b border-gray-200">
                 <Link to="/" onClick={() => setIsOpen(false)}>
                   <div className="flex flex-col">
-                    <h1 className="text-xl font-bold text-navy-blue">Amit Kadam</h1>
+                    <h1 className="text-xl font-bold text-black">Amit Kadam</h1>
                     <p className="text-xs text-gray-600">Equity Research Analyst</p>
                   </div>
                 </Link>
@@ -228,7 +219,7 @@ const Navbar = () => {
                         onClick={() => setIsOpen(false)}
                         className={({ isActive }) => 
                           `block py-4 px-2 text-lg font-medium transition-all duration-300 ${
-                            isActive ? "text-gold bg-yellow-50" : "text-gray-800 hover:text-navy-blue hover:bg-blue-50"
+                            isActive ? "text-black bg-gray-100 font-bold" : "text-gray-700 hover:text-black hover:bg-gray-50"
                           }`
                         }
                       >
@@ -239,7 +230,7 @@ const Navbar = () => {
                         <button
                           onClick={() => setIsServicesOpen(!isServicesOpen)}
                           className={`flex items-center justify-between w-full text-lg font-medium px-2 ${
-                            isActivePath(item.path) ? "text-gold" : "text-gray-800"
+                            isActivePath(item.path) ? "text-black font-bold" : "text-gray-700"
                           }`}
                         >
                           {item.name}
@@ -263,7 +254,7 @@ const Navbar = () => {
                                     }}
                                     className={({ isActive }) => 
                                       `block py-3 px-2 rounded-lg transition-all duration-300 ${
-                                        isActive ? "text-gold bg-yellow-50" : "text-gray-700 hover:text-navy-blue hover:bg-blue-50"
+                                        isActive ? "text-black bg-gray-100 font-bold" : "text-gray-700 hover:text-black hover:bg-gray-50"
                                       }`
                                     }
                                   >
@@ -285,7 +276,7 @@ const Navbar = () => {
                 <a 
                   href="/resume.pdf"
                   download
-                  className="flex items-center justify-center bg-gold text-navy-blue px-6 py-4 rounded-lg shadow-lg font-semibold text-lg"
+                  className="flex items-center justify-center bg-black text-white px-6 py-4 rounded-lg shadow-lg font-semibold text-lg border border-black"
                 >
                   <FaFileDownload className="mr-3 text-lg" />
                   Download Resume
@@ -293,7 +284,7 @@ const Navbar = () => {
                 
                 <a 
                   href="tel:+918956506020" 
-                  className="flex items-center justify-center bg-navy-blue text-white px-6 py-4 rounded-lg shadow-lg font-semibold text-lg"
+                  className="flex items-center justify-center bg-white text-black px-6 py-4 rounded-lg shadow-lg font-semibold text-lg border border-black"
                 >
                   <FaPhone className="mr-3 text-lg" />
                   +91 89565 06020
@@ -307,7 +298,7 @@ const Navbar = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center"
+                      className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center border border-gray-300"
                       title={social.name}
                     >
                       {social.icon}
@@ -319,7 +310,7 @@ const Navbar = () => {
                 <div className="text-center mt-4">
                   <a 
                     href="mailto:amitkadam1562@gmail.com"
-                    className="text-navy-blue hover:text-gold font-semibold transition-colors duration-300"
+                    className="text-black hover:text-gray-700 font-semibold transition-colors duration-300"
                   >
                     amitkadam1562@gmail.com
                   </a>
