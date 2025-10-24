@@ -15,8 +15,8 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const primaryColor = "#1e3a8a"; // Navy Blue
-  const secondaryColor = "#d4af37"; // Gold
+  const primaryColor = "#000080"; // Navy Blue
+  const secondaryColor = "#FFD700"; // Gold
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -110,7 +110,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-gray-800 relative border-t border-gray-200">
       {/* Top Border */}
-      <div className="h-0.5 bg-gradient-to-r from-navy-blue via-gold to-navy-blue"></div>
+      <div className="h-0.5 bg-gradient-to-r from-[#000080] via-[#FFD700] to-[#000080]"></div>
       
       {/* Main Footer Content */}
       <div className="max-w-screen-xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -123,8 +123,8 @@ const Footer = () => {
           className="space-y-4"
         >
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold text-navy-blue">Amit Kadam</h2>
-            <p className="text-sm text-gold font-semibold">Equity Research Analyst & MBA Finance</p>
+            <h2 className="text-2xl font-bold text-[#000080]">Amit Kadam</h2>
+            <p className="text-sm text-[#FFD700] font-semibold">Equity Research Analyst & MBA Finance</p>
           </div>
           <p className="text-gray-600 text-sm leading-relaxed">
             Aspiring Equity Research Analyst specializing in financial modeling, valuation, 
@@ -138,7 +138,7 @@ const Footer = () => {
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center bg-gold text-navy-blue px-4 py-2 rounded-lg font-semibold text-sm hover:bg-yellow-500 transition-all duration-200 shadow-md hover:shadow-lg"
+            className="inline-flex items-center bg-[#FFD700] text-[#000080] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#e6c200] transition-all duration-200 shadow-md hover:shadow-lg"
           >
             <FaFileDownload className="mr-2" />
             Download Resume
@@ -159,7 +159,7 @@ const Footer = () => {
                 >
                   {item.icon}
                 </div>
-                <span className="text-gray-600 group-hover:text-navy-blue transition-colors duration-200">
+                <span className="text-gray-600 group-hover:text-[#000080] transition-colors duration-200">
                   {item.text}
                 </span>
               </motion.a>
@@ -177,7 +177,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-3"
           >
-            <h3 className="text-base font-semibold uppercase tracking-wide text-navy-blue">
+            <h3 className="text-base font-semibold uppercase tracking-wide text-[#000080]">
               {section.title}
             </h3>
             <ul className="space-y-2">
@@ -189,9 +189,9 @@ const Footer = () => {
                 >
                   <Link 
                     to={link.path} 
-                    className="text-gray-600 hover:text-gold transition-all duration-200 flex items-center group text-sm"
+                    className="text-gray-600 hover:text-[#FFD700] transition-all duration-200 flex items-center group text-sm"
                   >
-                    <span className="w-1.5 h-1.5 bg-gold rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                    <span className="w-1.5 h-1.5 bg-[#FFD700] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                     {link.icon && <span className="mr-1.5">{link.icon}</span>}
                     {link.name}
                   </Link>
@@ -210,7 +210,7 @@ const Footer = () => {
           className="space-y-4"
         >
           <div>
-            <h3 className="text-base font-semibold uppercase tracking-wide mb-3 text-navy-blue">
+            <h3 className="text-base font-semibold uppercase tracking-wide mb-3 text-[#000080]">
               Stay Updated
             </h3>
             <p className="text-gray-600 text-sm mb-3">
@@ -222,13 +222,13 @@ const Footer = () => {
                 placeholder="Your email address" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="px-3 py-2 w-full rounded border border-gray-300 bg-white focus:outline-none focus:ring-1 focus:ring-navy-blue text-sm transition-all duration-200"
+                className="px-3 py-2 w-full rounded border border-gray-300 bg-white focus:outline-none focus:ring-1 focus:ring-[#000080] text-sm transition-all duration-200"
                 required
                 disabled={isSubmitting}
               />
               <motion.button 
                 type="submit" 
-                className="px-4 py-2 bg-gradient-to-r from-navy-blue to-blue-800 text-white rounded hover:shadow transition-all duration-200 w-full disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
+                className="px-4 py-2 bg-gradient-to-r from-[#000080] to-[#1a1a8a] text-white rounded hover:shadow transition-all duration-200 w-full disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -259,7 +259,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-base font-semibold uppercase tracking-wide mb-3 text-navy-blue">
+            <h3 className="text-base font-semibold uppercase tracking-wide mb-3 text-[#000080]">
               Connect With Me
             </h3>
             <div className="flex space-x-2">
@@ -298,7 +298,7 @@ const Footer = () => {
             className="text-center md:text-left"
           >
             <p className="text-gray-600 text-sm">
-              © {currentYear} <span className="text-navy-blue font-semibold">Amit Kadam</span>. All rights reserved.
+              © {currentYear} <span className="text-[#000080] font-semibold">Amit Kadam</span>. All rights reserved.
             </p>
           </motion.div>
           
@@ -311,19 +311,19 @@ const Footer = () => {
           >
             <Link 
               to="/privacy" 
-              className="text-gray-600 hover:text-gold transition-colors duration-200 text-xs"
+              className="text-gray-600 hover:text-[#FFD700] transition-colors duration-200 text-xs"
             >
               Privacy
             </Link>
             <Link 
               to="/terms" 
-              className="text-gray-600 hover:text-gold transition-colors duration-200 text-xs"
+              className="text-gray-600 hover:text-[#FFD700] transition-colors duration-200 text-xs"
             >
               Terms
             </Link>
             <Link 
               to="/contact" 
-              className="text-gray-600 hover:text-gold transition-colors duration-200 text-xs"
+              className="text-gray-600 hover:text-[#FFD700] transition-colors duration-200 text-xs"
             >
               Contact
             </Link>
