@@ -281,7 +281,7 @@ const Footer = () => {
                 >
                   {social.icon}
                 </motion.a>
-              ))}
+              ))} 
             </div>
           </div>
         </motion.div>
