@@ -3,10 +3,10 @@ import React, { useState, useEffect, useRef } from 'react';
 const ProfessionalHero = () => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showContent, setShowContent] = useState(false);
+  const [showContent, setShowContent] = useState(false);  
   const imageRef = useRef(null);
 
-  const fullText = "Amit Kadam – Equity Research Analyst & MBA Finance";
+  const fullText = "Equity Research & Finance Enthusiast | MBA Finance Student";
   const typingSpeed = 80;
 
   useEffect(() => {

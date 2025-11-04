@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const ServicesSnapshot = () => {
-    const [displayedText, setDisplayedText] = useState('');
-    const [currentIndex, setCurrentIndex] = useState(0);
     const [activeCard, setActiveCard] = useState(null);
-
-    const fullText = "Professional Services";
-    const typingSpeed = 80;
 
     // Professional SVG Icons
     const ProfessionalIcons = {
@@ -75,17 +70,6 @@ const ServicesSnapshot = () => {
         }
     ];
 
-    useEffect(() => {
-        if (currentIndex < fullText.length) {
-            const timer = setTimeout(() => {
-                setDisplayedText(fullText.substring(0, currentIndex + 1));
-                setCurrentIndex(currentIndex + 1);
-            }, typingSpeed);
-
-            return () => clearTimeout(timer);
-        }
-    }, [currentIndex, fullText]);
-
     return (
         <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -99,10 +83,7 @@ const ServicesSnapshot = () => {
                     </div>
 
                     <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-                        <span className="block min-h-[60px] font-normal">
-                            {displayedText}
-                            <span className="inline-block w-0.5 h-12 bg-[#000080] ml-2 animate-pulse"></span>
-                        </span>
+                        Professional Services
                     </h2>
 
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -266,7 +247,7 @@ const ServicesSnapshot = () => {
                         <div className="absolute top-1/5 right-1/5">
                             <div className="flex space-x-2 opacity-20">
                                 <div className="w-3 h-3 bg-[#000080] rounded-full animate-ping" style={{ animationDelay: '0s' }}></div>
-                                <div className="w-3 h-3 bg-[#000080] rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+                                <div className="w-3 h-3 bg-[#000080] rounded-full animate-ping" style={{ animationDelay: '1s' }}></div> 
                                 <div className="w-3 h-3 bg-[#000080] rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
                             </div>
                         </div>

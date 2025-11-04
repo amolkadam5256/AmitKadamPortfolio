@@ -138,7 +138,7 @@ const Footer = () => {
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center bg-[#FFD700] text-[#000080] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#e6c200] transition-all duration-200 shadow-md hover:shadow-lg"
+            className="inline-flex items-center bg-[#FFD700] text-[#000080] px-4 py-2  font-semibold text-sm hover:bg-[#e6c200] transition-all duration-200 shadow-md hover:shadow-lg"
           >
             <FaFileDownload className="mr-2" />
             Download Resume
@@ -154,7 +154,7 @@ const Footer = () => {
                 className="flex items-start space-x-2 group cursor-pointer text-sm"
               >
                 <div 
-                  className="p-1.5 rounded-full text-white mt-0.5 flex-shrink-0"
+                  className="p-1.5  text-white mt-0.5 flex-shrink-0"
                   style={{ backgroundColor: item.color }}
                 >
                   {item.icon}
@@ -191,7 +191,7 @@ const Footer = () => {
                     to={link.path} 
                     className="text-gray-600 hover:text-[#FFD700] transition-all duration-200 flex items-center group text-sm"
                   >
-                    <span className="w-1.5 h-1.5 bg-[#FFD700] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                    <span className="w-1.5 h-1.5 bg-[#FFD700]  mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                     {link.icon && <span className="mr-1.5">{link.icon}</span>}
                     {link.name}
                   </Link>
@@ -222,13 +222,13 @@ const Footer = () => {
                 placeholder="Your email address" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="px-3 py-2 w-full rounded border border-gray-300 bg-white focus:outline-none focus:ring-1 focus:ring-[#000080] text-sm transition-all duration-200"
+                className="px-3 py-2 w-full  border border-gray-300 bg-white focus:outline-none focus:ring-1 focus:ring-[#000080] text-sm transition-all duration-200"
                 required
                 disabled={isSubmitting}
               />
               <motion.button 
                 type="submit" 
-                className="px-4 py-2 bg-gradient-to-r from-[#000080] to-[#1a1a8a] text-white rounded hover:shadow transition-all duration-200 w-full disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
+                className="px-4 py-2 bg-gradient-to-r from-[#000080] to-[#1a1a8a] text-white  hover:shadow transition-all duration-200 w-full disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -241,7 +241,7 @@ const Footer = () => {
               <motion.div 
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`mt-2 p-2 rounded text-xs flex items-center space-x-1 ${
+                className={`mt-2 p-2  text-xs flex items-center space-x-1 ${
                   submitStatus === "success" 
                     ? "bg-green-100 text-green-700" 
                     : "bg-red-100 text-red-700"
@@ -269,7 +269,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-gray-100 hover:shadow transition-all duration-200"
+                  className="p-2 bg-gray-100 hover:shadow transition-all duration-200"
                   style={{ color: social.color }}
                   whileHover={{ 
                     scale: 1.1,
