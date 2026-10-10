@@ -5,6 +5,7 @@ import { ResponsiveContainer, ComposedChart, CartesianGrid, XAxis, YAxis, Toolti
 import { caseStudiesData } from "../data/caseStudies";
 import { valuationDetails } from "../data/valuationDetails";
 import ComparableDashboard from "../components/ComparableDashboard";
+import HistoricalFinanceDashboard from "../components/HistoricalFinanceDashboard";
 import { 
   ArrowLeft, 
   ArrowRight, 
@@ -261,6 +262,8 @@ export default function CaseStudyDetail() {
             <p className="text-xs text-slate-500">Source: uploaded PadCare Labs model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
           </div>
         )}
+
+        <HistoricalFinanceDashboard studyId={study.slug} />
 
         {study.slug === "manufacturing-a-comparables" && <ComparableDashboard />}
 
