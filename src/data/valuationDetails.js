@@ -1,0 +1,1 @@
+export const valuationDetails = { 'manufacturing-a-model': { enterpriseValueCr: 40.24348107, equityValueCr: 38.74095277, waccPct: 18.58904724, terminalGrowthPct: 5, fcffCr: [-1.830653,-0.706819,0.976832,3.783103,7.901981,11.608541] } };
