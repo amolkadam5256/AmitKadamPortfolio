@@ -39,7 +39,7 @@ export default function Resume() {
               Curriculum Vitae
             </span>
             <h1 className="text-lg font-bold text-slate-900">
-              Amit Kadam — Corporate Finance Resume
+              Amit Kadam — Corporate Finance Analyst | CV (September 2026)
             </h1>
           </div>
 
@@ -93,7 +93,7 @@ export default function Resume() {
               SUMMARY
             </h3>
             <p className="text-xs text-slate-700 leading-relaxed text-justify">
-              Corporate finance professional with experience in financial modelling, DCF and comparable company valuation, fundraising support, forecasting, working capital and cash flow analysis, capital structure and debt analysis, MIS, and CFO-level reporting. Worked across manufacturing, technology, logistics, healthcare, and asset management sectors, supporting valuation, peer benchmarking, strategic analysis, and management decision-making. Strong skills in financial analysis, Excel, and Python-based finance automation.
+              Corporate Finance Analyst with experience in financial modelling, valuation, fundraising support, FP&A and strategic finance. Developed integrated three-statement models, DCF and comparable-company valuations, five-year forecasts, investor return analyses and AI-enabled finance workflows across manufacturing, technology, logistics, healthcare, and asset management sectors, supporting valuation, peer benchmarking, strategic analysis, and management decision-making. Strong skills in financial analysis, Excel, and Python-based finance automation.
             </p>
           </div>
 
