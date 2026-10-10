@@ -247,6 +247,21 @@ export default function CaseStudyDetail() {
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
+            {valuation.scenarios && (
+              <div className="space-y-3">
+                <h3 className="text-base font-bold text-slate-900">Valuation Scenarios — Equity Value</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {valuation.scenarios.map(sc => (
+                    <div key={sc.name} className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                      <p className="text-xs font-semibold text-slate-600">{sc.name} Case</p>
+                      <p className="mt-1 text-lg font-bold text-slate-900">₹{sc.equityCr.toFixed(2)} Cr</p>
+                      <p className="mt-1 text-xs text-slate-500">{sc.assumptions}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-slate-500">Modelled scenarios are hypothetical valuations, not predicted transaction proceeds.</p>
+              </div>
+            )}
             {valuation.sensitivity && (
               <div className="space-y-3">
                 <h3 className="text-base font-bold text-slate-900">DCF Sensitivity — Enterprise Value</h3>
