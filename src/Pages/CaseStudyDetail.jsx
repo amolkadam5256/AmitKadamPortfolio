@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import SEO from "../components/common/SEO";
 import { ResponsiveContainer, ComposedChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, Line } from "recharts";
 import { caseStudiesData } from "../data/caseStudies";
+import { valuationDetails } from "../data/valuationDetails";
 import { 
   ArrowLeft, 
   ArrowRight, 
@@ -23,6 +24,7 @@ import {
 
 export default function CaseStudyDetail() {
   const { slug } = useParams();
+  const valuation = valuationDetails[slug];
   const study = caseStudiesData.find((s) => s.slug === slug || s.id === slug);
 
   if (!study) {
@@ -210,6 +212,40 @@ export default function CaseStudyDetail() {
               </ResponsiveContainer>
             </div>
             <p className="text-xs text-slate-500">Source: supplied financial model, P&L statement. Values displayed to two decimal places.</p>
+          </div>
+        )}
+
+        {valuation && (
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900">DCF Valuation & Cash Flow Dashboard</h2>
+              <p className="text-xs text-slate-500 mt-2">Workbook valuation · INR crore · projected FCFF (FY2026–FY2031)</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                ["Enterprise Value", "₹" + valuation.enterpriseValueCr.toFixed(2) + " Cr"],
+                ["Equity Value", "₹" + valuation.equityValueCr.toFixed(2) + " Cr"],
+                ["WACC", valuation.waccPct.toFixed(2) + "%"],
+                ["Terminal Growth", valuation.terminalGrowthPct.toFixed(2) + "%"]
+              ].map(([label,value]) => (
+                <div key={label} className="bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                  <div className="text-xs text-slate-500">{label}</div>
+                  <div className="text-lg font-bold text-slate-900 mt-1">{value}</div>
+                </div>
+              ))}
+            </div>
+            <div className="w-full h-72" role="img" aria-label="Forecast free cash flows to the firm by year">
+              <ResponsiveContainer width="100%" height="100%">
+                <ComposedChart data={valuation.fcffCr.map((v, i) => ({year: "FY" + (26 + i) + "E", fcff: v}))}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0"/>
+                  <XAxis dataKey="year" tick={{fontSize:11}} />
+                  <YAxis tick={{fontSize:11}} />
+                  <Tooltip formatter={v => [Number(v).toFixed(2) + " Cr", "FCFF"]} />
+                  <Bar dataKey="fcff" name="Forecast FCFF" fill="#2563eb" radius={[4,4,0,0]}/>
+                </ComposedChart>
+              </ResponsiveContainer>
+            </div>
+            <p className="text-xs text-slate-500">Source: uploaded Manufacturing Company A model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
           </div>
         )}
 
