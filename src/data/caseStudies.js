@@ -3,10 +3,10 @@ export const caseStudiesData = [
   {
     "id": "manufacturing-a-model",
     "slug": "manufacturing-a-model",
-    "title": "Manufacturing Company A — Financial Model & DCF",
+    "title": "PadCare Labs — Financial Model & DCF",
     "subtitle": "Three-statement model, cash flow forecasting and DCF valuation",
     "sector": "Manufacturing",
-    "clientContext": "Manufacturing Company A (Anonymised)",
+    "clientContext": "PadCare Labs (Anonymised)",
     "duration": "Financial analysis project",
     "role": "Financial Modelling & Analysis",
     "heroMetrics": [
@@ -120,10 +120,10 @@ export const caseStudiesData = [
   {
     "id": "manufacturing-a-comparables",
     "slug": "manufacturing-a-comparables",
-    "title": "Manufacturing Company A — Operational Comparables",
+    "title": "PadCare Labs — Operational Comparables",
     "subtitle": "Weighted growth, profitability and working-capital peer ranking",
     "sector": "Manufacturing",
-    "clientContext": "Manufacturing Company A (Anonymised)",
+    "clientContext": "PadCare Labs (Anonymised)",
     "duration": "Financial analysis project",
     "role": "Financial Modelling & Analysis",
     "heroMetrics": [
