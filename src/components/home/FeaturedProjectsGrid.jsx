@@ -121,7 +121,7 @@ export default function FeaturedProjectsGrid() {
               <span className="text-[11px] font-extrabold tracking-widest uppercase text-rose-400 bg-rose-950/80 px-3 py-1 rounded-full border border-rose-800">
                 {c3.sector}
               </span>
-              <span className="text-xs text-slate-400">CapSurge Advisory Mandate</span>
+              <span className="text-xs text-slate-400">Financial Analysis Case Study</span>
             </div>
             <h3 className="text-2xl sm:text-4xl font-extrabold text-white group-hover:text-rose-400 transition-colors">
               {c3.title}
