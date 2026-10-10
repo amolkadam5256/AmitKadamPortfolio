@@ -246,6 +246,18 @@ export default function CaseStudyDetail() {
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
+            {valuation.sensitivity && (
+              <div className="space-y-3">
+                <h3 className="text-base font-bold text-slate-900">DCF Sensitivity — Enterprise Value</h3>
+                <p className="text-xs text-slate-500">₹ crore · rows represent terminal growth assumptions; columns represent WACC assumptions</p>
+                <div className="overflow-x-auto rounded-xl border border-slate-200">
+                  <table className="min-w-full text-xs text-right tabular-nums">
+                    <thead><tr className="bg-slate-100"><th className="text-left px-3 py-2">Growth / WACC</th>{valuation.sensitivity.wacc.map(w=><th key={w} className="px-3 py-2">{w}%</th>)}</tr></thead>
+                    <tbody>{valuation.sensitivity.growth.map((g,i)=><tr key={g} className="border-t border-slate-100"><th className="text-left px-3 py-2">{g}%</th>{valuation.sensitivity.evCr[i].map((value,j)=><td key={j} className="px-3 py-2">{value.toFixed(2)}</td>)}</tr>)}</tbody>
+                  </table>
+                </div>
+              </div>
+            )}
             <p className="text-xs text-slate-500">Source: uploaded Manufacturing Company A model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
           </div>
         )}
