@@ -19,12 +19,8 @@ export default function CaseStudies() {
 
   const categories = [
     "All",
-    "Asset Management",
-    "Precision Engineering",
-    "Logistics",
-    "AI / SaaS",
-    "Healthcare",
-    "FMCG Research"
+    "Manufacturing",
+    "Industrial IoT"
   ];
 
   const filteredStudies = selectedCategory === "All" 
@@ -44,7 +40,7 @@ export default function CaseStudies() {
     <div className="bg-slate-50 min-h-screen py-12 lg:py-16">
       <SEO
         title="Institutional Case Studies & Financial Mandates | Amit Kadam"
-        description="Explore 6 deep-dive case studies across financial reconciliation automation, 3-statement DCF models, logistics peer benchmarking, AI SaaS fundraising, healthcare MIS, and Marico equity research."
+        description="Explore anonymised, model-backed financial case studies covering manufacturing financial models, operational comparables and industrial IoT valuation."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,13 +49,13 @@ export default function CaseStudies() {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-3">
             <TrendingUp className="w-3.5 h-3.5" />
-            <span>Advisory & Capstone Portfolio</span>
+            <span>Finance & Modelling Portfolio</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight">
             Financial Case Studies
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Detailed breakdowns of financial modelling architectures, valuation frameworks, Python-driven automation engines, and institutional equity research.
+            Source-backed financial modelling, operational peer comparisons, forecasting and valuation case studies with interactive financial dashboards.
           </p>
         </div>
 
@@ -84,7 +80,7 @@ export default function CaseStudies() {
           ))}
         </div>
 
-        {/* 6 Grid Case Studies */}
+        {/* Existing case study card grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredStudies.map((cs) => {
             const Icon = iconsMap[cs.id] || Layers;

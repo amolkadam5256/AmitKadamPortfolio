@@ -1,7 +1,11 @@
 import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import SEO from "../components/common/SEO";
+import { ResponsiveContainer, ComposedChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, Line } from "recharts";
 import { caseStudiesData } from "../data/caseStudies";
+import { valuationDetails } from "../data/valuationDetails";
+import ComparableDashboard from "../components/ComparableDashboard";
+import HistoricalFinanceDashboard from "../components/HistoricalFinanceDashboard";
 import { 
   ArrowLeft, 
   ArrowRight, 
@@ -22,6 +26,7 @@ import {
 
 export default function CaseStudyDetail() {
   const { slug } = useParams();
+  const valuation = valuationDetails[slug];
   const study = caseStudiesData.find((s) => s.slug === slug || s.id === slug);
 
   if (!study) {
@@ -187,6 +192,95 @@ export default function CaseStudyDetail() {
             ))}
           </div>
         </div>
+
+        {/* Source-backed financial dashboard inside the existing case-study structure */}
+        {study.chartData?.length > 0 && (
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900">Financial Performance Dashboard</h2>
+              <p className="text-xs text-slate-500 mt-2">Revenue and EBITDA (₹ crore). E denotes forecast; Industrial IoT figures are illustrative assumptions.</p>
+            </div>
+            <div className="h-80 w-full" role="img" aria-label="Revenue and EBITDA by financial year in crore rupees">
+              <ResponsiveContainer width="100%" height="100%">
+                <ComposedChart data={study.chartData} margin={{ top: 15, right: 12, left: 4, bottom: 8 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="year" tick={{fontSize:11}} />
+                  <YAxis tick={{fontSize:11}} />
+                  <Tooltip formatter={(value) => [Number(value).toFixed(2) + " Cr"]} />
+                  <Legend />
+                  <Bar dataKey="revenue" name="Revenue" fill="#2563eb" radius={[4,4,0,0]} />
+                  <Line dataKey="ebitda" name="EBITDA" stroke="#059669" strokeWidth={2.5} dot={{r:3}} />
+                </ComposedChart>
+              </ResponsiveContainer>
+            </div>
+            <p className="text-xs text-slate-500">Source: supplied financial model, P&L statement. Values displayed to two decimal places.</p>
+          </div>
+        )}
+
+        {valuation && (
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900">DCF Valuation & Cash Flow Dashboard</h2>
+              <p className="text-xs text-slate-500 mt-2">Workbook valuation · INR crore · projected FCFF (FY2026–FY2031)</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                ["Enterprise Value", "₹" + valuation.enterpriseValueCr.toFixed(2) + " Cr"],
+                ["Equity Value", "₹" + valuation.equityValueCr.toFixed(2) + " Cr"],
+                ["WACC", valuation.waccPct.toFixed(2) + "%"],
+                ["Terminal Growth", valuation.terminalGrowthPct.toFixed(2) + "%"]
+              ].map(([label,value]) => (
+                <div key={label} className="bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                  <div className="text-xs text-slate-500">{label}</div>
+                  <div className="text-lg font-bold text-slate-900 mt-1">{value}</div>
+                </div>
+              ))}
+            </div>
+            <div className="w-full h-72" role="img" aria-label="Forecast free cash flows to the firm by year">
+              <ResponsiveContainer width="100%" height="100%">
+                <ComposedChart data={valuation.fcffCr.map((v, i) => ({year: "FY" + (26 + i) + "E", fcff: v}))}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0"/>
+                  <XAxis dataKey="year" tick={{fontSize:11}} />
+                  <YAxis tick={{fontSize:11}} />
+                  <Tooltip formatter={v => [Number(v).toFixed(2) + " Cr", "FCFF"]} />
+                  <Bar dataKey="fcff" name="Forecast FCFF" fill="#2563eb" radius={[4,4,0,0]}/>
+                </ComposedChart>
+              </ResponsiveContainer>
+            </div>
+            {valuation.scenarios && (
+              <div className="space-y-3">
+                <h3 className="text-base font-bold text-slate-900">Valuation Scenarios — Equity Value</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {valuation.scenarios.map(sc => (
+                    <div key={sc.name} className="rounded-xl bg-slate-50 border border-slate-200 p-4">
+                      <p className="text-xs font-semibold text-slate-600">{sc.name} Case</p>
+                      <p className="mt-1 text-lg font-bold text-slate-900">₹{sc.equityCr.toFixed(2)} Cr</p>
+                      <p className="mt-1 text-xs text-slate-500">{sc.assumptions}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-slate-500">Modelled scenarios are hypothetical valuations, not predicted transaction proceeds.</p>
+              </div>
+            )}
+            {valuation.sensitivity && (
+              <div className="space-y-3">
+                <h3 className="text-base font-bold text-slate-900">DCF Sensitivity — Enterprise Value</h3>
+                <p className="text-xs text-slate-500">₹ crore · rows represent terminal growth assumptions; columns represent WACC assumptions</p>
+                <div className="overflow-x-auto rounded-xl border border-slate-200">
+                  <table className="min-w-full text-xs text-right tabular-nums">
+                    <thead><tr className="bg-slate-100"><th className="text-left px-3 py-2">Growth / WACC</th>{valuation.sensitivity.wacc.map(w=><th key={w} className="px-3 py-2">{w}%</th>)}</tr></thead>
+                    <tbody>{valuation.sensitivity.growth.map((g,i)=><tr key={g} className="border-t border-slate-100"><th className="text-left px-3 py-2">{g}%</th>{valuation.sensitivity.evCr[i].map((value,j)=><td key={j} className="px-3 py-2">{value.toFixed(2)}</td>)}</tr>)}</tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+            <p className="text-xs text-slate-500">Source: uploaded PadCare Labs model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
+          </div>
+        )}
+
+        <HistoricalFinanceDashboard studyId={study.slug} />
+
+        {study.slug === "manufacturing-a-comparables" && <ComparableDashboard />}
 
         {/* Results & Measurable Impact */}
         <div className="bg-slate-900 text-white rounded-2xl p-8 space-y-4">
