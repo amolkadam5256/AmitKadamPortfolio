@@ -11,15 +11,15 @@
 export const profileData = {
   name: "Amit Kadam",
   pronouns: "He/Him",
-  title: "Corporate Finance Professional",
-  headline: "Corporate Finance | Financial Modelling | Valuation | Fundraising | M&A | Finance Automation",
+  title: "Corporate Finance Analyst",
+  headline: "Corporate Finance Analyst | Financial Modelling & Valuation | FP&A | Reconciliation & AI-Enabled Finance",
   location: "Pune, Maharashtra, India",
   postalCode: "411052",
   phone: "+91 8956506020",
   email: "amitkadam1562@gmail.com",
   linkedin: "https://www.linkedin.com/in/amitkadam15",
   github: "https://github.com/amolkadam5256/AmitKadamPortfolio",
-  portfolioUrl: "https://amitkadam.vercel.app",
+  portfolioUrl: "https://amit-kadam-portfolio-omega.vercel.app/",
 
   currentRole: {
     title: "Corporate Financial Analyst",
@@ -33,7 +33,7 @@ export const profileData = {
     focus: "Fundraising, Financial Modelling, Valuation, Capital Structuring, M&A Advisory & AI Automation"
   },
 
-  summary: `I am an MBA in Finance with a background in Economics (B.A. Hons), working in corporate finance advisory at CapSurge. My professional focus is understanding how capital allocation, valuation, and transaction structures impact real businesses beyond static spreadsheets. My experience spans financial modelling, DCF and comparable company valuation, fundraising advisory, working capital optimization, and Python/Excel-based finance automation across manufacturing, SaaS/AI, logistics, healthcare, and asset management.`,
+  summary: `Corporate Finance Analyst with experience in financial modelling, valuation, fundraising support, FP&A, and strategic finance across manufacturing, technology, logistics, healthcare, and asset management. Developed integrated three-statement models, DCF and comparable-company valuations, five-year forecasts, and investor return analyses. Combines profitability, working capital, cash flow and capital structure analysis with Excel, Python, reconciliation automation and AI-enabled finance workflows.`,
 
   philosophy: {
     quote: "Clarity over complexity: translating financial numbers into strategic decisions that drive real enterprise value.",
@@ -73,49 +73,35 @@ export const profileData = {
   ],
 
   stats: [
-    {
-      id: "transactions",
-      value: "14,000+",
-      label: "Transactions Reconciled",
-      sublabel: "Multi-currency automated pipeline for Singapore AMC",
-      metricSource: "Resume — CapSurge Engagement"
-    },
-    {
-      id: "time-reduction",
-      value: "~60%",
-      label: "Reconciliation Time Saved",
-      sublabel: "Excel + Python automation across 15+ global client accounts",
-      metricSource: "Resume — CapSurge Engagement"
-    },
-    {
-      id: "peers-benchmarked",
-      value: "8 Peers",
-      label: "Logistics Companies Benchmarked",
-      sublabel: "Multiples analysis across EV/EBITDA, P/E, and EBITDA margins",
-      metricSource: "Resume — CapSurge Engagement"
-    },
-    {
-      id: "receivables-tracked",
-      value: "$500K+",
-      label: "Monthly Receivables Tracked",
-      sublabel: "Healthcare claims automation & cash flow forecasting",
-      metricSource: "Resume — CapSurge Engagement"
-    },
-    {
-      id: "healthcare-time",
-      value: "~40%",
-      label: "Process Cycle Reduction",
-      sublabel: "End-to-end AI automation for claims & MIS reporting",
-      metricSource: "Resume — CapSurge Engagement"
-    },
-    {
-      id: "research-deck",
-      value: "32 Slides",
-      label: "Institutional Equity Research",
-      sublabel: "Marico Ltd. FMCG Capstone (DuPont, ROCE 47.9%, ROE 41.7%)",
-      metricSource: "Resume — Capstone Project"
-    }
-  ],
+  {
+    "id": "vendor-volume",
+    "value": "52K+",
+    "label": "Vendor Transactions",
+    "sublabel": "Global logistics vendor reconciliation",
+    "metricSource": "Resume 30 Sep 2026"
+  },
+  {
+    "id": "intercompany",
+    "value": "24K+",
+    "label": "Intercompany Transactions",
+    "sublabel": "India–US reconciliation",
+    "metricSource": "Resume 30 Sep 2026"
+  },
+  {
+    "id": "recon-rate",
+    "value": "94–95%",
+    "label": "Automated Reconciliation",
+    "sublabel": "Logistics reconciliation engagements",
+    "metricSource": "Resume 30 Sep 2026"
+  },
+  {
+    "id": "automation",
+    "value": "90%+",
+    "label": "Manual Effort Reduced",
+    "sublabel": "US healthcare reporting workflow",
+    "metricSource": "Resume 30 Sep 2026"
+  }
+],
 
   education: [
     {
