@@ -4,6 +4,7 @@ import SEO from "../components/common/SEO";
 import { ResponsiveContainer, ComposedChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, Line } from "recharts";
 import { caseStudiesData } from "../data/caseStudies";
 import { valuationDetails } from "../data/valuationDetails";
+import ComparableDashboard from "../components/ComparableDashboard";
 import { 
   ArrowLeft, 
   ArrowRight, 
@@ -248,6 +249,8 @@ export default function CaseStudyDetail() {
             <p className="text-xs text-slate-500">Source: uploaded Manufacturing Company A model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
           </div>
         )}
+
+        {study.slug === "manufacturing-a-comparables" && <ComparableDashboard />}
 
         {/* Results & Measurable Impact */}
         <div className="bg-slate-900 text-white rounded-2xl p-8 space-y-4">
