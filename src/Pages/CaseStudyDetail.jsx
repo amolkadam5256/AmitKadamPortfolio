@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import SEO from "../components/common/SEO";
+import { ResponsiveContainer, ComposedChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, Line } from "recharts";
 import { caseStudiesData } from "../data/caseStudies";
 import { 
   ArrowLeft, 
@@ -187,6 +188,30 @@ export default function CaseStudyDetail() {
             ))}
           </div>
         </div>
+
+        {/* Source-backed financial dashboard inside the existing case-study structure */}
+        {study.chartData?.length > 0 && (
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900">Financial Performance Dashboard</h2>
+              <p className="text-xs text-slate-500 mt-2">Revenue and EBITDA (₹ crore). E denotes forecast; Industrial IoT figures are illustrative assumptions.</p>
+            </div>
+            <div className="h-80 w-full" role="img" aria-label="Revenue and EBITDA by financial year in crore rupees">
+              <ResponsiveContainer width="100%" height="100%">
+                <ComposedChart data={study.chartData} margin={{ top: 15, right: 12, left: 4, bottom: 8 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="year" tick={{fontSize:11}} />
+                  <YAxis tick={{fontSize:11}} />
+                  <Tooltip formatter={(value) => [Number(value).toFixed(2) + " Cr"]} />
+                  <Legend />
+                  <Bar dataKey="revenue" name="Revenue" fill="#2563eb" radius={[4,4,0,0]} />
+                  <Line dataKey="ebitda" name="EBITDA" stroke="#059669" strokeWidth={2.5} dot={{r:3}} />
+                </ComposedChart>
+              </ResponsiveContainer>
+            </div>
+            <p className="text-xs text-slate-500">Source: supplied financial model, P&L statement. Values displayed to two decimal places.</p>
+          </div>
+        )}
 
         {/* Results & Measurable Impact */}
         <div className="bg-slate-900 text-white rounded-2xl p-8 space-y-4">
