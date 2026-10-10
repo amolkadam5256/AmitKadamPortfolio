@@ -20,7 +20,13 @@ export default function CaseStudies() {
   const categories = [
     "All",
     "Manufacturing",
-    "Industrial IoT"
+    "Industrial IoT",
+    "Asset Management",
+    "Precision Engineering",
+    "Logistics",
+    "AI / SaaS",
+    "Healthcare",
+    "FMCG Research"
   ];
 
   const filteredStudies = selectedCategory === "All" 
@@ -40,7 +46,7 @@ export default function CaseStudies() {
     <div className="bg-slate-50 min-h-screen py-12 lg:py-16">
       <SEO
         title="Institutional Case Studies & Financial Mandates | Amit Kadam"
-        description="Explore anonymised, model-backed financial case studies covering manufacturing financial models, operational comparables and industrial IoT valuation."
+        description="Explore existing finance, equity research and automation case studies alongside the newly added financial models and dashboards."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +61,7 @@ export default function CaseStudies() {
             Financial Case Studies
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Source-backed financial modelling, operational peer comparisons, forecasting and valuation case studies with interactive financial dashboards.
+            Financial modelling, valuation, research, reconciliation and automation projects, including additional model-backed financial dashboards.
           </p>
         </div>
 
