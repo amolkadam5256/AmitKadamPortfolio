@@ -258,7 +258,7 @@ export default function CaseStudyDetail() {
                 </div>
               </div>
             )}
-            <p className="text-xs text-slate-500">Source: uploaded Manufacturing Company A model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
+            <p className="text-xs text-slate-500">Source: uploaded PadCare Labs model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
           </div>
         )}
 
