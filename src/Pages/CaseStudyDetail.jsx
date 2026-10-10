@@ -84,7 +84,7 @@ export default function CaseStudyDetail() {
                 {study.clientContext}
               </span>
               <span className="text-xs text-slate-500 font-medium">
-                Mandate Duration: {study.duration}
+                Project Context: {study.duration}
               </span>
             </div>
           </div>
