@@ -3,27 +3,27 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function StatsStrip() {
   const stats = [
-    {
-      value: "14,000+",
-      label: "Multi-Currency Transactions",
-      sublabel: "Processed with automated Python reconciliation engine for Singapore AMC"
-    },
-    {
-      value: "~60%",
-      label: "Reconciliation Cycle Reduction",
-      sublabel: "Cut manual spreadsheet matching across 15+ global accounts"
-    },
-    {
-      value: "12–18%",
-      label: "Estimated EV Optimization",
-      sublabel: "Strategic suggestion note built on 3-statement DCF model"
-    },
-    {
-      value: "8+",
-      label: "Logistics Peer Comparables",
-      sublabel: "Benchmarked EV/EBITDA, P/E multiples, and margin drivers"
-    }
-  ];
+  {
+    "value": "52,000+",
+    "label": "Vendor Transactions",
+    "sublabel": "Logistics vendor reconciliation dataset"
+  },
+  {
+    "value": "24,000+",
+    "label": "Intercompany Transactions",
+    "sublabel": "India–US accounting reconciliations"
+  },
+  {
+    "value": "94–95%",
+    "label": "Automated Reconciliation",
+    "sublabel": "Reported matching performance across logistics engagements"
+  },
+  {
+    "value": "90%+",
+    "label": "Manual Work Reduced",
+    "sublabel": "US healthcare finance reporting automation"
+  }
+];
 
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-y border-slate-200">
@@ -31,7 +31,7 @@ export default function StatsStrip() {
       {/* Small Category Label */}
       <div className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-rose-600 mb-8">
         <span>●</span>
-        <span>VERIFIED TELEMETRY</span>
+        <span>PROJECT HIGHLIGHTS</span>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
