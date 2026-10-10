@@ -5,57 +5,75 @@
 
 export const experienceData = [
   {
-    id: "capsurge-analyst",
-    company: "CapSurge",
-    role: "Corporate Financial Analyst",
-    employmentType: "Full-time Advisory",
-    location: "Pune, India",
-    period: "Jul 2026 – Present",
-    current: true,
-    companyDescription: "Boutique corporate finance advisory firm partnering with founders and senior finance leaders on fundraising, valuation, M&A, and AI-enabled finance transformation.",
-    summary: "Leading corporate finance deliverables across live client mandates, including 3-statement financial modelling, DCF and CCA valuations, fundraising collateral, investor discussions, and Python-based workflow automations.",
-    achievements: [
-      "Built dynamic 3-statement financial model (P&L, Balance Sheet, Cash Flow) and DCF valuation for an engineering manufacturer, recommending strategic levers to improve estimated Enterprise Value by 12–18%.",
-      "Constructed a Comparable Company Analysis (CCA) model benchmarking 8 logistics peers across EV/EBITDA and P/E multiples to support strategic pricing decisions.",
-      "Developed 5-year operating financial model and investor pitch deck for an AI/LLM SaaS company, modelling token-level compute COGS and investor dilution waterfalls.",
-      "Engineered automated Python + Excel reconciliation engine for a Singapore-based AMC, processing 14,000+ multi-currency transactions and cutting manual cycle time by ~60%.",
-      "Collaborated with cross-functional teams to build an end-to-end AI automation tool for a US healthcare provider, reducing operational processing time by ~40% and tracking $500K+ monthly receivables."
+    "id": "capsurge-analyst",
+    "company": "CapSurge Consulting Private Limited",
+    "role": "Corporate Financial Analyst",
+    "employmentType": "Full-time",
+    "location": "Pune, India",
+    "period": "Jul 2026 – Present",
+    "current": true,
+    "companyDescription": "Corporate finance and financial analytics consulting.",
+    "summary": "Financial modelling, valuation, FP&A, fundraising support, benchmarking and finance automation.",
+    "achievements": [
+      "Developed integrated three-statement models, DCF valuations and comparable-company analyses for private companies; built five-year projections across cash flows, capital structure and operational drivers.",
+      "Designed a weighted peer-benchmarking framework for growth, profitability, returns, working capital and balance-sheet metrics.",
+      "Managed US healthcare FP&A reporting including monthly P&L, weekly dashboards, MIS and rolling 13-week cash flow; helped automate workflows, reducing manual effort by 90%+.",
+      "Designed investment reconciliation processes across managed accounts, bonds, structured notes and pooled investments, with cash controls and exception reporting.",
+      "Supported fundraising financial modelling, investor materials, research and financial analysis for a technology company.",
+      "Contributed commercial and financial analysis to African electric mobility engagements.",
+      "Benchmarked 12 logistics technology competitors with weighted Excel scoring and management reporting.",
+      "Automated logistics reconciliations across ~52,000 vendor and ~24,000 India–US intercompany entries, achieving approximately 94–95% auto-reconciliation."
     ],
-    skills: ["Financial Modelling", "DCF Valuation", "Comparable Company Analysis", "Fundraising Support", "Capital Structuring", "Python Automation", "MIS Dashboarding", "M&A Advisory"]
+    "skills": [
+      "Financial Modelling",
+      "Valuation",
+      "FP&A",
+      "Excel",
+      "Python",
+      "Reconciliation",
+      "Peer Benchmarking"
+    ]
   },
   {
-    id: "capsurge-intern",
-    company: "CapSurge",
-    role: "Corporate Finance Intern",
-    employmentType: "Internship",
-    location: "Pune, India",
-    period: "Dec 2025 – Jun 2026",
-    current: false,
-    companyDescription: "Boutique corporate finance advisory firm specializing in capital raising and financial transformation.",
-    summary: "Supported live advisory mandates across fundraising, capital structuring, transaction analysis, and management MIS reporting.",
-    achievements: [
-      "Assisted in financial statement analysis, industry benchmarking, and valuation models using DCF, comparable companies, and precedent transactions.",
-      "Supported preparation of investor-facing pitch decks and financial summaries for founder-investor discussions.",
-      "Analyzed working capital challenges and cash conversion cycles across mid-market clients.",
-      "Designed automated monthly P&L dashboard for a US healthcare client, eliminating ~8 hours of manual reporting per cycle."
+    "id": "capsurge-intern",
+    "company": "CapSurge Consulting Private Limited",
+    "role": "Corporate Finance Intern",
+    "employmentType": "Internship",
+    "location": "Pune, India",
+    "period": "Dec 2025 – Jun 2026",
+    "current": false,
+    "companyDescription": "Corporate finance and analytics consulting.",
+    "summary": "Supported financial analysis, modelling, operational reporting and finance automation engagements.",
+    "achievements": [
+      "Supported work spanning financial modelling, valuation and financial analysis before transitioning to the Corporate Financial Analyst role."
     ],
-    skills: ["Financial Statement Analysis", "Valuation Benchmarking", "Investor Pitch Materials", "Working Capital Analysis", "Excel Dashboards"]
+    "skills": [
+      "Financial Analysis",
+      "Financial Modelling",
+      "Reporting",
+      "Excel"
+    ]
   },
   {
-    id: "autobat-intern",
-    company: "Autobat Pvt. Ltd.",
-    role: "Accounts Intern",
-    employmentType: "Internship",
-    location: "Pune, India",
-    period: "May 2025 – Jul 2025",
-    current: false,
-    companyDescription: "Manufacturing enterprise operating in automotive and industrial battery systems.",
-    summary: "Supported manufacturing accounts operations, ledger reconciliations, production cost trend analysis, and GST-compliant financial reporting in Tally ERP.",
-    achievements: [
-      "Reconciled vendor and customer ledgers across 500+ entries monthly, identifying and resolving journal entry discrepancies to improve ledger accuracy by 15%.",
-      "Analyzed production costs, expense trends, and working capital data to surface operational efficiency gaps for senior management MIS reports.",
-      "Supported preparation of monthly financial statements and management accounts within a GST-compliant manufacturing setup using Tally ERP."
+    "id": "autobat-intern",
+    "company": "Autobat Pvt. Ltd.",
+    "role": "Finance Intern",
+    "employmentType": "Internship",
+    "location": "Pune, India",
+    "period": "May 2025 – Jul 2025",
+    "current": false,
+    "companyDescription": "Manufacturing business.",
+    "summary": "Analysed costs, expenses and working capital, and supported accounting and management reporting.",
+    "achievements": [
+      "Analysed production costs, operating expenses, inventory, receivables and payables for management review.",
+      "Supported preparation of financial statements, GST-compliant accounting records and management reports using Tally ERP."
     ],
-    skills: ["Ledger Reconciliation", "Production Cost Analysis", "Working Capital Management", "Tally ERP", "MIS Reporting", "GST Compliance"]
+    "skills": [
+      "Working Capital Analysis",
+      "Cost Analysis",
+      "Tally ERP",
+      "MIS",
+      "GST"
+    ]
   }
 ];
