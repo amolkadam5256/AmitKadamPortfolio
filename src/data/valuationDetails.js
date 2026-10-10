@@ -12,6 +12,7 @@ export const valuationDetails = {
       7.901981,
       11.608541
     ],
+    "scenarios": [{"name":"Bear","equityCr":20.1914323767,"assumptions":"WACC 20%, growth 3%, FCFF ×0.70"},{"name":"Base","equityCr":38.7409527692,"assumptions":"Model base case"},{"name":"Bull","equityCr":76.0343701893,"assumptions":"WACC 16%, growth 6%, FCFF ×1.30"}],
     "sensitivity": {
       "wacc": [
         14,
