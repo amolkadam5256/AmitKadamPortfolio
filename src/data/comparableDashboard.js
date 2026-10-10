@@ -34,7 +34,7 @@ export const comparableDashboard = {
       2
     ],
     [
-      "Manufacturing Company A",
+      "PadCare Labs",
       59.70833,
       3
     ],
