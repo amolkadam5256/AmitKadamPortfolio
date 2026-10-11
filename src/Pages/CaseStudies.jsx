@@ -17,21 +17,12 @@ import {
 export default function CaseStudies() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = [
-    "All",
-    "Manufacturing",
-    "Industrial IoT",
-    "Asset Management",
-    "Precision Engineering",
-    "Logistics",
-    "AI / SaaS",
-    "Healthcare",
-    "FMCG Research"
-  ];
+  // Build filters from actual case-study sectors so no filter points to an empty, mismatched category.
+  const categories = ["All", ...new Set(caseStudiesData.map(cs => cs.sector))];
 
-  const filteredStudies = selectedCategory === "All" 
-    ? caseStudiesData 
-    : caseStudiesData.filter(cs => cs.sector.toLowerCase().includes(selectedCategory.toLowerCase()) || cs.title.toLowerCase().includes(selectedCategory.toLowerCase()));
+  const filteredStudies = selectedCategory === "All"
+    ? caseStudiesData
+    : caseStudiesData.filter(cs => cs.sector === selectedCategory);
 
   const iconsMap = {
     "reconciliation-automation": Layers,
