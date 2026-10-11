@@ -274,7 +274,7 @@ export default function CaseStudyDetail() {
                 </div>
               </div>
             )}
-            <p className="text-xs text-slate-500">Source: uploaded PadCare Labs model, Valuation worksheet. Model assumptions are not guaranteed outcomes.</p>
+            <p className="text-xs text-slate-500">Source: PadCare Labs financial model — primary Valuation worksheet (EV ₹40.24 Cr; equity ₹38.74 Cr). The workbook also contains a separate Valuation_ sheet with different results; this dashboard consistently uses the primary Valuation worksheet. Scenarios are illustrative, not transaction prices.</p>
           </div>
         )}
 
