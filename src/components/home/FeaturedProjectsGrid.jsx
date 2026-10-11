@@ -9,6 +9,7 @@ export default function FeaturedProjectsGrid() {
   const c3 = caseStudiesData.find(c => c.id === "ai-fundraising-model");
   const c4 = caseStudiesData.find(c => c.id === "healthcare-finance-automation");
   const c5 = caseStudiesData.find(c => c.id === "marico-equity-research");
+  const financialModels = caseStudiesData.filter(c => ["manufacturing-a-model", "manufacturing-a-comparables", "manufacturing-b-model", "industrial-iot-dcf"].includes(c.id));
 
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -121,7 +122,7 @@ export default function FeaturedProjectsGrid() {
               <span className="text-[11px] font-extrabold tracking-widest uppercase text-rose-400 bg-rose-950/80 px-3 py-1 rounded-full border border-rose-800">
                 {c3.sector}
               </span>
-              <span className="text-xs text-slate-400">CapSurge Advisory Mandate</span>
+              <span className="text-xs text-slate-400">Financial Analysis Case Study</span>
             </div>
             <h3 className="text-2xl sm:text-4xl font-extrabold text-white group-hover:text-rose-400 transition-colors">
               {c3.title}
@@ -232,13 +233,40 @@ export default function FeaturedProjectsGrid() {
 
       </div>
 
+      {/* New model-based projects: additive, original five featured cards unchanged */}
+      <div className="mt-14">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-rose-600">Financial Modelling Portfolio</p>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight mt-2">Explore the financial models</h3>
+            <p className="text-sm text-slate-500 mt-2">Historical analysis, operational comparables and forecast-driven valuations.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {financialModels.map(model => (
+            <Link key={model.id} to={`/case-studies/${model.slug}`} className="group block rounded-2xl border border-slate-200 bg-white hover:border-blue-300 hover:shadow-lg transition-all p-6">
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-[11px] uppercase tracking-wider font-semibold text-blue-700">{model.sector}</span>
+                <ArrowUpRight className="h-4 w-4 text-slate-400 group-hover:text-blue-700" />
+              </div>
+              <h4 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-blue-700">{model.title}</h4>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">{model.subtitle}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {model.tools.slice(0,3).map(tool => <span key={tool} className="text-[11px] text-slate-600 bg-slate-100 rounded-md px-2 py-1">{tool}</span>)}
+              </div>
+              <span className="mt-5 inline-flex text-xs font-bold text-blue-700 items-center gap-1">Explore analysis <ArrowRight className="h-3.5 w-3.5" /></span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       {/* Bottom Center Pill CTA */}
       <div className="mt-14 text-center">
         <Link
           to="/case-studies"
           className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full font-bold text-xs sm:text-sm text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition-all hover:scale-105"
         >
-          <span>View All 6 Case Studies</span>
+          <span>View All Case Studies</span>
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

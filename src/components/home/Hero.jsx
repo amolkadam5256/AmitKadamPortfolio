@@ -21,9 +21,9 @@ export default function Hero() {
     "Logistics Peer Benchmarking",
     "AI/LLM SaaS Unit Economics",
     "Marico Equity Research",
-    "Autobat Accounts Operations",
+    "Manufacturing Working Capital Analysis",
     "3-Statement DCF Models",
-    "14,000+ Transactions Reconciled"
+    "76,000+ Logistics Transactions Analysed"
   ];
 
   return (
@@ -76,7 +76,7 @@ export default function Hero() {
               className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-full font-semibold text-xs sm:text-sm text-slate-200 bg-white/5 hover:bg-white/10 border border-white/15 transition-all hover:scale-105"
             >
               <FileText className="w-4 h-4 text-slate-400" />
-              <span>Download Resume</span>
+              <span>View Resume</span>
             </Link>
           </div>
 
@@ -87,46 +87,46 @@ export default function Hero() {
                 Transactions
               </span>
               <span className="text-xl sm:text-2xl font-extrabold text-white mt-0.5 block">
-                14,000+
+                76,000+
               </span>
               <span className="text-[10px] text-emerald-400 font-medium block">
-                ~60% time saved
+                Logistics reconciliation volume
               </span>
             </div>
 
             <div className="p-3.5 rounded-2xl bg-white/5 border border-white/5">
               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
-                Estimated EV
+                Automated Reconciliation
               </span>
               <span className="text-xl sm:text-2xl font-extrabold text-white mt-0.5 block">
-                12–18%
+                94–95%
               </span>
               <span className="text-[10px] text-blue-400 font-medium block">
-                Upside Levers
+                Matching performance
               </span>
             </div>
 
             <div className="p-3.5 rounded-2xl bg-white/5 border border-white/5">
               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
-                Receivables
+                Healthcare Automation
               </span>
               <span className="text-xl sm:text-2xl font-extrabold text-white mt-0.5 block">
-                $500K+
+                90%+
               </span>
               <span className="text-[10px] text-purple-400 font-medium block">
-                Monthly Visibility
+                Manual effort reduced
               </span>
             </div>
 
             <div className="p-3.5 rounded-2xl bg-white/5 border border-white/5">
               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
-                Capstone ROE
+                Competitors Benchmarked
               </span>
               <span className="text-xl sm:text-2xl font-extrabold text-white mt-0.5 block">
-                41.7%
+                12
               </span>
               <span className="text-[10px] text-rose-400 font-medium block">
-                Marico Capstone
+                Logistics technology
               </span>
             </div>
           </div>

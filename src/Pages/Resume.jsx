@@ -2,7 +2,6 @@ import React from "react";
 import SEO from "../components/common/SEO";
 import { profileData } from "../data/profile";
 import { experienceData } from "../data/experience";
-import { caseStudiesData } from "../data/caseStudies";
 import { 
   Printer, 
   Download, 
@@ -21,9 +20,7 @@ export default function Resume() {
     window.print();
   };
 
-  const maricoProject = caseStudiesData.find(cs => cs.id === "marico-equity-research");
-
-  return (
+    return (
     <div className="bg-slate-100 min-h-screen py-8 sm:py-12 lg:py-16">
       <SEO
         title="Resume & Curriculum Vitae | Amit Kadam"
@@ -97,117 +94,43 @@ export default function Resume() {
             </p>
           </div>
 
-          {/* Professional Experience */}
+          {/* Professional Experience — derived from latest September 2026 CV */}
           <div className="space-y-4">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-950 border-b border-slate-900 pb-1">
-              EXPERIENCE
-            </h3>
-
-            {/* CapSurge */}
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-950 border-b border-slate-900 pb-1">EXPERIENCE</h3>
             <div className="space-y-2">
-              <div className="flex justify-between items-baseline text-xs font-bold text-slate-900">
-                <div>
-                  <span className="font-extrabold">Corporate Financial Analyst</span> – CapSurge
-                  <div className="font-semibold text-slate-600">Corporate Finance Intern – CapSurge</div>
-                </div>
-                <div className="text-right">
-                  <div>Jul 2026 – Present</div>
-                  <div className="font-normal text-slate-500">Dec 2025 – Jun 2026</div>
-                </div>
+              <div className="flex justify-between items-start gap-3 text-xs text-slate-900">
+                <div><strong>CapSurge Consulting Private Limited</strong><div className="font-medium">Corporate Financial Analyst</div><div className="text-slate-600">Corporate Finance Intern</div></div>
+                <div className="text-right shrink-0"><div>Jul 2026 – Present</div><div className="text-slate-600">Dec 2025 – Jun 2026</div></div>
               </div>
-              <div className="text-[11px] text-slate-500 italic">Pune, India</div>
-
+              <p className="text-[11px] text-slate-500">Pune, India</p>
               <ul className="space-y-1.5 text-xs text-slate-700 list-disc list-outside pl-4">
-                <li>
-                  Engineered an Excel + Python-based automated reconciliation system for a Singapore-based AMC, processing <strong>14,000+ multi-currency transactions</strong> and reducing manual reconciliation time by <strong>~60%</strong>; delivered structured variance reports identifying mismatches across <strong>15+ global client accounts</strong>.
-                </li>
-                <li>
-                  Built a full <strong>3-statement financial model</strong> (P&L, Balance Sheet, Cash Flow) for an engineering product manufacturing company; performed <strong>DCF valuation</strong> and delivered a written suggestion note recommending strategies to increase enterprise value by an estimated <strong>12–18%</strong>.
-                </li>
-                <li>
-                  Constructed a comparable company analysis (CCA) and financial model for a logistics firm; benchmarked <strong>8 peer companies</strong> across EV/EBITDA and P/E multiples to support strategic decision-making.
-                </li>
-                <li>
-                  Developed a financial model and pitch deck for an AI/LLM-based product company (customer review intelligence platform) assisting fundraising efforts; modelled 5-year revenue projections and investor return scenarios.
-                </li>
-                <li>
-                  Designed an automated monthly P&L dashboard for a US healthcare client, eliminating <strong>~8 hours</strong> of manual reporting per cycle; integrated live data feeds and variance flags for management review.
-                </li>
-                <li>
-                  Led financial and operational workflow automation for a US-based healthcare therapy provider; collaborated with the tech team to build an end-to-end AI automation tool covering claims processing, cash flow forecasting, and MIS reporting — reducing operational processing time by <strong>~40%</strong>.
-                </li>
-                <li>
-                  Produced healthcare MIS dashboards and claims-based cash flow forecasts, enabling the client to track <strong>$500K+ in monthly receivables</strong> and improve collections cycle visibility.
-                </li>
+                <li>Built integrated three-statement models, DCF and comparable-company valuations, five-year projections, and enterprise-value analysis across manufacturing and sustainability-focused sectors.</li>
+                <li>Designed weighted peer benchmarking across growth, profitability, operating efficiency, working capital, returns and balance-sheet metrics.</li>
+                <li>Managed US healthcare monthly P&amp;L, weekly operational dashboards, MIS and rolling 13-week cash-flow forecasting; supported automation reducing manual work by <strong>90%+</strong>.</li>
+                <li>Designed multi-currency investment reconciliation and reporting covering managed accounts, bonds, structured notes and pooled investments.</li>
+                <li>Supported fundraising modelling, investor materials and investment analysis for an AI-based technology business.</li>
+                <li>Supported financial and commercial analysis of African EV and charging infrastructure engagements.</li>
+                <li>Led weighted competitive benchmarking of approximately <strong>12 logistics technology competitors</strong>.</li>
+                <li>Developed vendor and intercompany reconciliation solutions covering approximately <strong>52,000 vendor</strong> and <strong>24,000 India–US transactions</strong>, achieving approximately <strong>94–95%</strong> automatic reconciliation.</li>
               </ul>
             </div>
-
-            {/* Autobat */}
             <div className="space-y-2 pt-2">
-              <div className="flex justify-between items-baseline text-xs font-bold text-slate-900">
-                <div>
-                  <span className="font-extrabold">Accounts Intern</span> – Autobat Pvt. Ltd.
-                </div>
-                <div>May 2025 – Jul 2025</div>
-              </div>
-              <div className="text-[11px] text-slate-500 italic">Pune, India</div>
-
+              <div className="flex justify-between items-start gap-3 text-xs text-slate-900"><strong>Finance Intern — Autobat Pvt. Ltd.</strong><span className="shrink-0">May 2025 – Jul 2025</span></div>
+              <p className="text-[11px] text-slate-500">Pune, India</p>
               <ul className="space-y-1.5 text-xs text-slate-700 list-disc list-outside pl-4">
-                <li>
-                  Reconciled vendor and customer ledgers across <strong>500+ entries monthly</strong>; identified and resolved discrepancies in journal entries, improving ledger accuracy by <strong>15%</strong>.
-                </li>
-                <li>
-                  Analysed production costs, expense trends, and working capital data to surface efficiency gaps; findings incorporated into monthly MIS reports presented to senior management.
-                </li>
-                <li>
-                  Supported preparation of financial statements and management reporting using Tally ERP within a GST-compliant manufacturing environment.
-                </li>
+                <li>Analysed production costs, operating expenses and working-capital movements across inventory, receivables and payables for management reporting.</li>
+                <li>Supported financial statements, GST-compliant accounting records and management reports using Tally ERP.</li>
               </ul>
             </div>
           </div>
 
-          {/* Capstone Projects */}
+          {/* Technical Skills — September 2026 CV */}
           <div className="space-y-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-950 border-b border-slate-900 pb-1">
-              PROJECTS
-            </h3>
-            
-            <div className="space-y-1.5">
-              <div className="flex justify-between items-baseline text-xs font-bold text-slate-900">
-                <span>Equity Research Report – Marico Ltd. (FMCG Sector) | Capstone Project</span>
-              </div>
-              <ul className="space-y-1 text-xs text-slate-700 list-disc list-outside pl-4">
-                <li>
-                  Authored a <strong>32-slide institutional-grade equity research report</strong> on Marico Ltd.; integrated macro data from IMF, IBEF, CRISIL, and Statista to build an investment thesis supported by sector and competitive analysis.
-                </li>
-                <li>
-                  Performed DuPont analysis, ratio analysis, and financial statement deep-dive; computed <strong>ROE of 41.7%</strong> and <strong>ROCE of 47.9%</strong> and identified red flags in receivables, working capital, and distribution operations.
-                </li>
-                <li>
-                  Evaluated corporate governance, board composition, and capital allocation practices; assessed management quality and shareholder value creation through structured governance scoring.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Technical Skills Taxonomy */}
-          <div className="space-y-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-950 border-b border-slate-900 pb-1">
-              SKILLS
-            </h3>
-            <div className="space-y-1 text-xs text-slate-700">
-              <p>
-                <strong>Financial Modelling & Valuation:</strong> DCF Valuation, Comparable Company Analysis, 3-Statement Modelling, LBO Basics, Forecasting, Scenario Analysis, Sensitivity Analysis
-              </p>
-              <p>
-                <strong>Data Analysis & Reporting:</strong> Excel (Advanced – PivotTables, Power Query, Macros), Python (Pandas, automation scripts), MIS Dashboards, Financial Dashboarding, Variance Reporting
-              </p>
-              <p>
-                <strong>Research & Tools:</strong> Equity Research, Financial Statement Analysis, Ratio Analysis, Corporate Governance Assessment, Screener.in, NSE/BSE Portals, Yahoo Finance, Tally ERP, PowerPoint
-              </p>
-              <p>
-                <strong>Core Competencies:</strong> Investment Analysis, Corporate Finance, Capital Markets, Data Interpretation, Stakeholder Reporting, Attention to Detail
-              </p>
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-950 border-b border-slate-900 pb-1">SKILLS</h3>
+            <div className="space-y-1.5 text-xs text-slate-700">
+              <p><strong>Financial Modelling &amp; Valuation:</strong> Three-statement modelling, DCF, comparable-company analysis, forecasting, scenario and sensitivity analysis, financial statement analysis.</p>
+              <p><strong>Corporate Finance &amp; FP&amp;A:</strong> Budgeting and forecasting, 13-week cash-flow forecasting, working-capital analysis, MIS and management reporting, fundraising support, strategic finance, peer benchmarking.</p>
+              <p><strong>Finance Automation &amp; Reconciliation:</strong> Investment, vendor and intercompany reconciliation, exception management, financial controls, workflow automation, AI-enabled finance automation.</p>
             </div>
           </div>
 
@@ -240,7 +163,7 @@ export default function Resume() {
                   <strong>SSC (X) & HSC (XII)</strong> – Jawahar Navodaya Vidyalaya | CBSE
                 </div>
                 <div className="text-right">
-                  Percentage: 79%, 82%
+                  Class X: 8.2 CGPA · Class XII: 82%
                 </div>
               </div>
             </div>
