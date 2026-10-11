@@ -1,6 +1,6 @@
 /**
  * Amit Kadam - Complete 6 Institutional Case Studies
- * Directly mapped to authentic engagements from CapSurge and Capstone project.
+ * Existing six case studies preserved alongside newly added financial modelling projects.
  */
 
 const originalCaseStudies = [
@@ -11,7 +11,7 @@ const originalCaseStudies = [
     subtitle: "Automating 14,000+ multi-currency transaction reconciliations for a Singapore-based Asset Management Client",
     sector: "Asset Management & Capital Markets",
     clientContext: "Singapore-based Asset Management Client (Anonymized)",
-    duration: "CapSurge Advisory Engagement",
+    duration: "Finance & Analytics Engagement",
     role: "Lead Financial Automation & Data Analyst",
     tagline: "Reduced manual reconciliation cycle time by ~60% across 15+ global accounts using Python & Advanced Excel.",
     heroMetrics: [
@@ -66,8 +66,8 @@ const originalCaseStudies = [
     title: "3-Statement Financial Model & DCF Valuation",
     subtitle: "Comprehensive integrated financial modelling and intrinsic valuation for an Engineering Product Manufacturer",
     sector: "Industrial & Precision Engineering",
-    clientContext: "Engineering Product Manufacturing Company (CapSurge Client)",
-    duration: "CapSurge Advisory Mandate",
+    clientContext: "Engineering Product Manufacturing Company (Anonymised)",
+    duration: "Financial Analysis Project",
     role: "Financial Modeller & Valuation Analyst",
     tagline: "Constructed integrated 3-statement model and DCF valuation recommending operational & capital levers to improve estimated Enterprise Value by 12–18%.",
     heroMetrics: [
@@ -124,7 +124,7 @@ const originalCaseStudies = [
     subtitle: "Relative valuation and peer benchmarking across 8 logistics and supply chain players",
     sector: "Logistics & Supply Chain Solutions",
     clientContext: "Regional Logistics & Express Freight Provider",
-    duration: "CapSurge Advisory Engagement",
+    duration: "Finance & Analytics Engagement",
     role: "Valuation & Benchmarking Analyst",
     tagline: "Constructed comprehensive peer benchmarking model for 8 comparable companies across EV/EBITDA and P/E multiples to anchor strategic pricing.",
     heroMetrics: [
@@ -183,7 +183,7 @@ const originalCaseStudies = [
     subtitle: "5-Year operating projections, unit economics, and investor return scenarios for a Customer Review Intelligence Platform",
     sector: "B2B SaaS / Artificial Intelligence",
     clientContext: "AI/LLM Customer Review Intelligence Platform",
-    duration: "CapSurge Advisory Mandate",
+    duration: "Financial Analysis Project",
     role: "Financial Modeller & Pitch Strategy Analyst",
     tagline: "Modelled 5-year revenue trajectory, token/compute cost structure, and investor dilution scenarios for an AI product fundraising round.",
     heroMetrics: [
@@ -239,7 +239,7 @@ const originalCaseStudies = [
     subtitle: "AI-driven operational workflow automation, P&L dashboarding, and $500K+ monthly receivables forecasting",
     sector: "US Healthcare / Therapy Services",
     clientContext: "US-Based Healthcare Therapy Provider",
-    duration: "CapSurge Advisory Mandate",
+    duration: "Financial Analysis Project",
     role: "Finance Operations & Automation Specialist",
     tagline: "Reduced operational processing time by ~40% and eliminated ~8 hours of manual monthly P&L reporting while tracking $500K+ in receivables.",
     heroMetrics: [
